@@ -1,0 +1,10 @@
+---
+import { getI18n, pageUrl } from '../i18n';
+const { locale, t } = getI18n(Astro.url.pathname);
+const content = t.content.contact;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+<BaseLayout title={t.nav.contact}>
+  <section class="contact-page section-space"><div class="wrap"><div class="eyebrow"><span class="eyebrow-line"></span> {t.ui.contact}</div><h1>{content.titleStart}<br /><em>{content.titleEmphasis}</em></h1><div class="contact-grid"><p>{content.description}</p><ContactForm /></div></div></section>
+</BaseLayout>

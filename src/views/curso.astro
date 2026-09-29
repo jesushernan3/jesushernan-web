@@ -1,0 +1,12 @@
+---
+import { getI18n, pageUrl } from '../i18n';
+const { locale, t } = getI18n(Astro.url.pathname);
+const content = t.content.course;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MotionArt from '../components/MotionArt.astro';
+---
+<BaseLayout title={t.nav.course}>
+  <section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow"><span class="eyebrow-line"></span> {t.nav.course.toUpperCase()} / JESÚS HERNÁN</div><h1>{content.heroTitleStart}<br /><em>{content.heroTitleEmphasis}</em><br />{content.heroTitleEnd}</h1><p>{content.heroDescription}</p><a href="#sobre-el-curso" class="button button-dark">{content.heroButton}<span aria-hidden="true">↗</span></a></div><MotionArt variant="product" label={t.ui.imageAlt} /></div></section>
+  <section class="section-space light-section" id="sobre-el-curso"><div class="wrap split-section"><div><div class="eyebrow"><span class="eyebrow-line"></span> 01 / {t.ui.aboutCourse}</div><h2>{content.aboutTitleStart}<br /><em>{content.aboutTitleEmphasis}</em></h2></div><div><p>{content.aboutParagraph1}</p><p>{content.aboutParagraph2}</p></div></div></section>
+  <section class="section-space benefits-section"><div class="wrap"><div class="eyebrow"><span class="eyebrow-line"></span> 02 / {t.ui.benefits}</div><h2>{content.benefitsTitleStart}<em>{content.benefitsTitleEmphasis}</em></h2><div class="number-grid three">{content.benefits.map((item, i) => <article><span>0{i + 1}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></div></section>
+</BaseLayout>

@@ -1,0 +1,288 @@
+{
+  "nav": {
+    "home": "Home",
+    "app": "App",
+    "ebook": "Ebook",
+    "course": "Course",
+    "contact": "Contact"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "nav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "footerNav": "Footer links",
+    "talk": "Let’s talk",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "top": "Back to top",
+    "development": "Site in development",
+    "language": "Language",
+    "movement": "MOVEMENT",
+    "scroll": "SCROLL TO EXPLORE",
+    "photoSpace": "SPACE FOR YOUR OWN PHOTO OR VIDEO",
+    "about": "ABOUT ME",
+    "explore": "EXPLORE",
+    "contact": "CONTACT",
+    "training": "TRAINING",
+    "reading": "READING",
+    "learning": "LEARNING",
+    "bodyMovement": "BODY IN MOTION",
+    "artSide": "MOVEMENT · BODY · PRACTICE",
+    "starting": "STARTING POINTS",
+    "preview": "PREVIEW",
+    "benefits": "BENEFITS",
+    "imageSample": "SAMPLE IMAGE",
+    "guarantee": "GUARANTEE",
+    "testimonial": "TESTIMONIAL",
+    "faq": "FREQUENTLY ASKED QUESTIONS",
+    "aboutCourse": "ABOUT THE COURSE",
+    "conditions": "Design placeholder. Terms to be defined.",
+    "realTestimonial": "Placeholder text. Replace with a real testimonial.",
+    "imageAlt": "Temporary movement graphic",
+    "heroAlt": "Temporary movement graphic for the hero",
+    "portraitAlt": "Space reserved for a portrait of Jesús Hernán",
+    "name": "Name",
+    "email": "Email address",
+    "message": "Message",
+    "yourName": "Your name",
+    "yourEmail": "you@example.com",
+    "yourMessage": "Write your message...",
+    "send": "Send message",
+    "formPreview": "This is a preview. The form does not send messages yet.",
+    "exploreItem": "Explore"
+  },
+  "meta": {
+    "description": "Jesús Hernán · Movement and training."
+  },
+  "content": {
+    "footer": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "home": {
+      "appTitle": "Lorem ipsum dolor sit amet.",
+      "appDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere lacus vitae dolor suscipit.",
+      "ebookTitle": "Consectetur adipiscing elit.",
+      "ebookDescription": "Praesent at augue sed lacus tempor interdum. Aliquam erat volutpat, donec blandit ipsum.",
+      "courseTitle": "Integer vitae justo sed nunc.",
+      "courseDescription": "Curabitur euismod, nisl at congue pretium, risus augue malesuada lorem, vitae tempor arcu.",
+      "heroTitleStart": "Lorem ipsum",
+      "heroTitleEmphasis": "dolor sit amet,",
+      "heroTitleEnd": "consectetur.",
+      "heroDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc facilisis tincidunt. Praesent feugiat sapien ut interdum gravida.",
+      "heroPrimaryButton": "Lorem ipsum ",
+      "heroSecondaryButton": "Dolor sit amet ",
+      "heroNoteStart": "LOREM IPSUM",
+      "heroNoteEnd": "DOLOR SIT AMET",
+      "ticker": " LOREM IPSUM DOLOR ",
+      "aboutTitleStart": "Lorem ipsum",
+      "aboutTitleEmphasis": "dolor sit amet.",
+      "aboutParagraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ligula at eros varius efficitur. Aenean euismod, urna id aliquet vulputate, nisi nibh convallis velit.",
+      "aboutParagraph2": "Curabitur ullamcorper, nisl vel tempor interdum, nibh turpis laoreet augue, vel luctus purus magna at lorem. Donec volutpat feugiat mi, at placerat velit finibus ut.",
+      "aboutQuote": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”",
+      "offeringsTitleStart": "Lorem ipsum",
+      "offeringsTitleEmphasis": "dolor sit amet.",
+      "offeringsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.",
+      "contactTitleStart": "Lorem ipsum",
+      "contactTitleEmphasis": "dolor sit amet?",
+      "contactDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum neque sed nunc molestie, vitae suscipit eros commodo."
+    },
+    "course": {
+      "heroTitleStart": "Lorem ipsum",
+      "heroTitleEmphasis": "dolor sit amet,",
+      "heroTitleEnd": "consectetur.",
+      "heroDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc facilisis tincidunt.",
+      "heroButton": "Lorem ipsum ",
+      "aboutTitleStart": "Lorem ipsum",
+      "aboutTitleEmphasis": "dolor sit amet.",
+      "aboutParagraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ligula at eros varius efficitur. Aenean euismod, urna id aliquet vulputate, nisi nibh convallis velit.",
+      "aboutParagraph2": "Curabitur ullamcorper, nisl vel tempor interdum, nibh turpis laoreet augue, vel luctus purus magna at lorem. Donec volutpat feugiat mi.",
+      "benefitsTitleStart": "Lorem ipsum ",
+      "benefitsTitleEmphasis": "dolor sit amet.",
+      "benefits": [
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        }
+      ]
+    },
+    "contact": {
+      "titleStart": "Lorem ipsum",
+      "titleEmphasis": "dolor sit amet?",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum neque sed nunc molestie, vitae suscipit eros commodo."
+    },
+    "app": {
+      "heroTitleStart": "Lorem ipsum",
+      "heroTitleEmphasis": "dolor sit amet,",
+      "heroTitleEnd": "consectetur.",
+      "heroDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc facilisis tincidunt.",
+      "heroButton": "Lorem ipsum ",
+      "painTitleStart": "Lorem ipsum",
+      "painTitleEmphasis": "dolor sit amet.",
+      "painIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "galleryTitleStart": "Lorem ipsum",
+      "galleryTitleEmphasis": "consectetur elit.",
+      "galleryIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "benefitsTitleStart": "Lorem ipsum",
+      "benefitsTitleEmphasis": "dolor sit amet.",
+      "benefitsIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "ctaTitleStart": "Lorem ipsum ",
+      "ctaTitleEmphasis": "dolor sit amet.",
+      "ctaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "ctaButton": "Lorem ipsum ",
+      "guaranteeTitle": "Lorem ipsum dolor.",
+      "guaranteeDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique.",
+      "testimonial": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc.”",
+      "faqTitleStart": "Lorem ipsum ",
+      "faqTitleEmphasis": "dolor sit amet?",
+      "painItems": [
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        }
+      ],
+      "benefitItems": [
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? ",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat sapien ut interdum gravida."
+        },
+        {
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? ",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat sapien ut interdum gravida."
+        },
+        {
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? ",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat sapien ut interdum gravida."
+        }
+      ]
+    },
+    "ebook": {
+      "heroTitleStart": "Lorem ipsum",
+      "heroTitleEmphasis": "dolor sit amet,",
+      "heroTitleEnd": "consectetur.",
+      "heroDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc facilisis tincidunt.",
+      "heroButton": "Lorem ipsum ",
+      "painTitleStart": "Lorem ipsum",
+      "painTitleEmphasis": "dolor sit amet.",
+      "painIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "galleryTitleStart": "Lorem ipsum",
+      "galleryTitleEmphasis": "consectetur elit.",
+      "galleryIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "benefitsTitleStart": "Lorem ipsum",
+      "benefitsTitleEmphasis": "dolor sit amet.",
+      "benefitsIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "ctaTitleStart": "Lorem ipsum ",
+      "ctaTitleEmphasis": "dolor sit amet.",
+      "ctaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "ctaButton": "Lorem ipsum ",
+      "guaranteeTitle": "Lorem ipsum dolor.",
+      "guaranteeDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique.",
+      "testimonial": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc.”",
+      "faqTitleStart": "Lorem ipsum ",
+      "faqTitleEmphasis": "dolor sit amet?",
+      "painItems": [
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Consectetur adipiscing elit. Mauris vitae nibh nec lectus interdum faucibus."
+        }
+      ],
+      "benefitItems": [
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? ",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat sapien ut interdum gravida."
+        },
+        {
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? ",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat sapien ut interdum gravida."
+        },
+        {
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? ",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat sapien ut interdum gravida."
+        }
+      ]
+    }
+  }
+}

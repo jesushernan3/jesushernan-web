@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import MotionArt from '../components/MotionArt.astro';
+const offerings = [
+  { number: '01', type: 'ENTRENAMIENTO', name: 'App', title: 'Lorem ipsum dolor sit amet.', copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere lacus vitae dolor suscipit.', link: '/app/', accent: 'app' },
+  { number: '02', type: 'LECTURA', name: 'Ebook', title: 'Consectetur adipiscing elit.', copy: 'Praesent at augue sed lacus tempor interdum. Aliquam erat volutpat, donec blandit ipsum.', link: '/ebook/', accent: 'ebook' },
+  { number: '03', type: 'APRENDIZAJE', name: 'Curso', title: 'Integer vitae justo sed nunc.', copy: 'Curabitur euismod, nisl at congue pretium, risus augue malesuada lorem, vitae tempor arcu.', link: '/curso/', accent: 'curso' }
+];
+---
+<BaseLayout title="Inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> JESÚS HERNÁN / MOVIMIENTO</div>
+        <h1>Lorem ipsum<br /><em>dolor sit amet,</em><br />consectetur.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc facilisis tincidunt. Praesent feugiat sapien ut interdum gravida.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#explora">Lorem ipsum <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#sobre-mi">Dolor sit amet <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-footnote"><span class="asterisk">✳</span><span>LOREM IPSUM<br />DOLOR SIT AMET</span></div>
+      </div>
+      <div class="hero-visual"><MotionArt label="Gráfico provisional de movimiento para el hero" /><div class="hero-image-caption"><span>FIG. 01</span><span>ESPACIO PARA FOTO O VIDEO PROPIO</span></div></div>
+    </div>
+    <div class="hero-vertical" aria-hidden="true">DESLIZÁ PARA EXPLORAR &nbsp; ↓</div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div>CUERPO EN MOVIMIENTO <span>✳</span> LOREM IPSUM DOLOR <span>✳</span> CUERPO EN MOVIMIENTO <span>✳</span> LOREM IPSUM DOLOR <span>✳</span></div></div>
+
+  <section class="about section-space" id="sobre-mi">
+    <div class="wrap about-grid">
+      <div class="about-image"><MotionArt variant="portrait" label="Espacio reservado para un retrato de Jesús Hernán" /><span class="image-tag">01 — QUIÉN SOY</span></div>
+      <div class="about-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> QUIÉN SOY</div>
+        <h2>Lorem ipsum<br /><em>dolor sit amet.</em></h2>
+        <div class="about-copy"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ligula at eros varius efficitur. Aenean euismod, urna id aliquet vulputate, nisi nibh convallis velit.</p><p>Curabitur ullamcorper, nisl vel tempor interdum, nibh turpis laoreet augue, vel luctus purus magna at lorem. Donec volutpat feugiat mi, at placerat velit finibus ut.</p></div>
+        <div class="quote-line"><span>✳</span><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offerings section-space" id="explora">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> EXPLORÁ</div><h2>Lorem ipsum<br /><em>dolor sit amet.</em></h2></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.</p></div>
+      <div class="offer-grid">{offerings.map(item => <a class:list={['offer-card', `offer-card--${item.accent}`]} href={item.link} aria-label={`Conocer ${item.name}`}>
+        <div class="offer-top"><span>{item.number} / {item.type}</span><span aria-hidden="true">↗</span></div>
+        <div class="offer-graphic" aria-hidden="true"><span>{item.name === 'App' ? '◌' : item.name === 'Ebook' ? '⌁' : '✳'}</span></div>
+        <div class="offer-bottom"><div class="offer-name">{item.name}</div><h3>{item.title}</h3><p>{item.copy}</p><span class="offer-link">Explorar {item.name.toLowerCase()} <b>↗</b></span></div>
+      </a>)}</div>
+    </div>
+  </section>
+
+  <section class="contact-preview section-space" id="contacto">
+    <div class="wrap contact-grid"><div><div class="eyebrow"><span class="eyebrow-line"></span> CONTACTO</div><h2>Lorem ipsum<br /><em>dolor sit amet?</em></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum neque sed nunc molestie, vitae suscipit eros commodo.</p><span class="contact-mark" aria-hidden="true">↗</span></div><ContactForm /></div>
+  </section>
+</BaseLayout>

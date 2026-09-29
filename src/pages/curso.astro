@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MotionArt from '../components/MotionArt.astro';
+---
+<BaseLayout title="Curso">
+  <section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow"><span class="eyebrow-line"></span> CURSO / JESÚS HERNÁN</div><h1>Lorem ipsum<br /><em>dolor sit amet,</em><br />consectetur.</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed nunc facilisis tincidunt.</p><a href="#sobre-el-curso" class="button button-dark">Lorem ipsum <span aria-hidden="true">↗</span></a></div><MotionArt variant="product" label="Espacio para imagen del curso" /></div></section>
+  <section class="section-space light-section" id="sobre-el-curso"><div class="wrap split-section"><div><div class="eyebrow"><span class="eyebrow-line"></span> 01 / SOBRE EL CURSO</div><h2>Lorem ipsum<br /><em>dolor sit amet.</em></h2></div><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ligula at eros varius efficitur. Aenean euismod, urna id aliquet vulputate, nisi nibh convallis velit.</p><p>Curabitur ullamcorper, nisl vel tempor interdum, nibh turpis laoreet augue, vel luctus purus magna at lorem. Donec volutpat feugiat mi.</p></div></div></section>
+  <section class="section-space benefits-section"><div class="wrap"><div class="eyebrow"><span class="eyebrow-line"></span> 02 / BENEFICIOS</div><h2>Lorem ipsum <em>dolor sit amet.</em></h2><div class="number-grid three">{[1,2,3].map(n => <article><span>0{n}</span><h3>Lorem ipsum dolor sit amet.</h3><p>Praesent at augue sed lacus tempor interdum. Aenean feugiat justo ac varius accumsan.</p></article>)}</div></div></section>
+</BaseLayout>

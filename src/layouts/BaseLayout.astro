@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+import { getI18n, pageUrl, pages, locales, languageNames } from '../i18n';
+const { locale, t, page } = getI18n(Astro.url.pathname);
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = t.meta.description } = Astro.props;
+const pathname = Astro.url.pathname;
+const nav = pages.map(key => ({ label: t.nav[key], href: pageUrl(locale, key) }));
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f0e9" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={new URL(pathname, 'https://jesushernan.com')} />
+    {locales.map(lang => <link rel="alternate" hreflang={lang} href={new URL(pageUrl(lang, page), Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(pageUrl('es', page), Astro.site)} />
+    <title>{title} · Jesús Hernán</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">{t.ui.skip}</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href={pageUrl(locale, 'home')} aria-label={`Jesús Hernán, ${t.nav.home}`}>JESÚS<span class="wordmark-spark">✳</span>HERNÁN<span class="wordmark-dot">.</span></a>
+        <nav class="main-nav" aria-label={t.ui.nav}>
+          {nav.map(item => <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>{item.label}</a>)}
+        </nav>
+        <a class="header-action" href={pageUrl(locale, 'contact')}>{t.ui.talk} <span aria-hidden="true">↗</span></a>
+        <nav class="language-switch" aria-label={t.ui.language}>
+          {locales.map(lang => <a href={pageUrl(lang, page)} lang={lang} hreflang={lang} aria-label={languageNames[lang]} title={languageNames[lang]} aria-current={lang === locale ? 'true' : undefined}>{lang.toUpperCase()}</a>)}
+        </nav>
+        <details class="mobile-nav">
+          <summary aria-label={t.ui.openMenu}>{t.ui.menu} <span aria-hidden="true">☰</span></summary>
+          <nav aria-label={t.ui.mobileNav}>
+            {nav.map(item => <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>{item.label} <span aria-hidden="true">↗</span></a>)}
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="contenido"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <a class="wordmark footer-logo" href={pageUrl(locale, 'home')}>JESÚS<span class="wordmark-spark">✳</span>HERNÁN<span class="wordmark-dot">.</span></a>
+          <p>{t.content.footer.description}</p>
+          <a href="#contenido" class="back-top">{t.ui.top} ↑</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© {new Date().getFullYear()} Jesús Hernán</span>
+          <nav aria-label={t.ui.footerNav}>{nav.map(item => <a href={item.href}>{item.label}</a>)}</nav>
+          <span>{t.ui.development}</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

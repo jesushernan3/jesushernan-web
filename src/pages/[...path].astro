@@ -1,0 +1,18 @@
+---
+import { locales, pages, pageUrl } from '../i18n';
+import Home from '../views/index.astro';
+import App from '../views/app.astro';
+import Ebook from '../views/ebook.astro';
+import Course from '../views/curso.astro';
+import Contact from '../views/contacto.astro';
+
+export function getStaticPaths() {
+  return locales.flatMap(locale => pages.map(page => ({
+    params: { path: pageUrl(locale, page).replace(/^\/|\/$/g, '') || undefined },
+    props: { page },
+  })));
+}
+const views = { home: Home, app: App, ebook: Ebook, course: Course, contact: Contact };
+const View = views[Astro.props.page as keyof typeof views];
+---
+<View />

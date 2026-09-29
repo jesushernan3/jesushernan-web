@@ -1,0 +1,16 @@
+---
+import { getI18n, pageUrl } from '../i18n';
+const { locale, t } = getI18n(Astro.url.pathname);
+interface Props { variant?: 'hero' | 'portrait' | 'product'; label?: string }
+const { variant = 'hero', label = t.ui.imageAlt } = Astro.props;
+---
+<div class:list={['motion-art', `motion-art--${variant}`]} role="img" aria-label={label}>
+  <div class="art-circle circle-one"></div>
+  <div class="art-circle circle-two"></div>
+  <div class="art-line line-one"></div>
+  <div class="art-line line-two"></div>
+  <div class="art-core"></div>
+  <span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span>
+  <span class="art-number">01 / 03</span>
+  <span class="art-side">{t.ui.artSide}</span>
+</div>

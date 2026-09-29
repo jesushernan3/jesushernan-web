@@ -1,0 +1,15 @@
+---
+import { getI18n } from '../i18n';
+const { t } = getI18n(Astro.url.pathname);
+---
+<form class="contact-form" data-preview-message={t.ui.formPreview} onsubmit="event.preventDefault(); this.querySelector('[role=status]').textContent = this.dataset.previewMessage;">
+  <div class="form-row">
+    <label>{t.ui.name} <input type="text" name="nombre" autocomplete="name" placeholder={t.ui.yourName} required /></label>
+    <label>{t.ui.email} <input type="email" name="email" autocomplete="email" placeholder={t.ui.yourEmail} required /></label>
+  </div>
+  <label>{t.ui.message} <textarea name="mensaje" rows="5" placeholder={t.ui.yourMessage} required></textarea></label>
+  <div class="form-bottom">
+    <button class="button button-dark" type="submit">{t.ui.send} <span aria-hidden="true">↗</span></button>
+    <span role="status" aria-live="polite"></span>
+  </div>
+</form>

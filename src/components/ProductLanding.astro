@@ -1,0 +1,27 @@
+---
+import { getI18n, pageUrl } from '../i18n';
+const { locale, t } = getI18n(Astro.url.pathname);
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MotionArt from './MotionArt.astro';
+interface Props { product: 'App' | 'Ebook' }
+const { product } = Astro.props;
+const isApp = product === 'App';
+const content = t.content[isApp ? 'app' : 'ebook'];
+const pain = content.painItems.map((item, i) => ({ n: String(i + 1).padStart(2, '0'), title: item.title, text: item.description }));
+const benefits = content.benefitItems.map((item, i) => ({ n: String(i + 1).padStart(2, '0'), title: item.title, text: item.description }));
+---
+<BaseLayout title={product}>
+  <section class="page-hero">
+    <div class="wrap page-hero-grid">
+      <div><div class="eyebrow"><span class="eyebrow-line"></span> {product.toUpperCase()} / JESÚS HERNÁN</div><h1>{content.heroTitleStart}<br /><em>{content.heroTitleEmphasis}</em><br />{content.heroTitleEnd}</h1><p>{content.heroDescription}</p><a href="#beneficios" class="button button-dark">{content.heroButton}<span aria-hidden="true">↗</span></a></div>
+      <MotionArt variant="product" label={t.ui.imageAlt} />
+    </div>
+  </section>
+  <section class="section-space light-section">
+    <div class="wrap"><div class="section-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> 01 / {t.ui.starting}</div><h2>{content.painTitleStart}<br /><em>{content.painTitleEmphasis}</em></h2></div><p>{content.painIntro}</p></div><div class="number-grid">{pain.map(item => <article><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div>
+  </section>
+  <section class="section-space gallery-section"><div class="wrap"><div class="eyebrow"><span class="eyebrow-line"></span> 02 / {t.ui.preview}</div><div class="section-head"><h2>{content.galleryTitleStart}<br /><em>{content.galleryTitleEmphasis}</em></h2><p>{content.galleryIntro}</p></div><div class="gallery-grid">{[1,2,3].map(n => <div class="gallery-item"><div class="gallery-symbol" aria-hidden="true">{n === 1 ? '◌' : n === 2 ? '✳' : '⌁'}</div><span>0{n} / {t.ui.imageSample}</span></div>)}</div></div></section>
+  <section class="section-space benefits-section" id="beneficios"><div class="wrap"><div class="section-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> 03 / {t.ui.benefits}</div><h2>{content.benefitsTitleStart}<br /><em>{content.benefitsTitleEmphasis}</em></h2></div><p>{content.benefitsIntro}</p></div><div class="benefit-list">{benefits.map(item => <article><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p><span aria-hidden="true">↗</span></article>)}</div></div></section>
+  <section class="cta-panel"><div class="wrap"><div class="eyebrow"><span class="eyebrow-line"></span> {isApp ? 'APP' : 'EBOOK'}</div><h2>{content.ctaTitleStart}<em>{content.ctaTitleEmphasis}</em></h2><p>{content.ctaDescription}</p><a href={pageUrl(locale, 'contact')} class="button button-light">{content.ctaButton}<span aria-hidden="true">↗</span></a></div></section>
+  <section class="section-space after-cta"><div class="wrap"><div class="placeholder-two"><div><span class="eyebrow">04 / {t.ui.guarantee}</span><h2>{content.guaranteeTitle}</h2><p>{content.guaranteeDescription}</p><small>{t.ui.conditions}</small></div><div><span class="eyebrow">05 / {t.ui.testimonial}</span><blockquote>{content.testimonial}</blockquote><small>{t.ui.realTestimonial}</small></div></div><div class="faq-preview"><div class="eyebrow"><span class="eyebrow-line"></span> 06 / {t.ui.faq}</div><h2>{content.faqTitleStart}<em>{content.faqTitleEmphasis}</em></h2>{content.questions.map(item => <details><summary>{item.question}<span>+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
+</BaseLayout>

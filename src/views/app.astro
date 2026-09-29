@@ -1,0 +1,6 @@
+---
+import { getI18n, pageUrl } from '../i18n';
+const { locale, t } = getI18n(Astro.url.pathname);
+import ProductLanding from '../components/ProductLanding.astro';
+---
+<ProductLanding product="App" />

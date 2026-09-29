@@ -1,0 +1,60 @@
+---
+import { getI18n, pageUrl } from '../i18n';
+const { locale, t } = getI18n(Astro.url.pathname);
+const content = t.content.home;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import MotionArt from '../components/MotionArt.astro';
+const offerings = [
+  { number: '01', type: t.ui.training, name: 'App', title: content.appTitle, copy: content.appDescription, link: pageUrl(locale, 'app'), accent: 'app' },
+  { number: '02', type: t.ui.reading, name: 'Ebook', title: content.ebookTitle, copy: content.ebookDescription, link: pageUrl(locale, 'ebook'), accent: 'ebook' },
+  { number: '03', type: t.ui.learning, name: t.nav.course, title: content.courseTitle, copy: content.courseDescription, link: pageUrl(locale, 'course'), accent: 'curso' }
+];
+---
+<BaseLayout title={t.nav.home}>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> JESÚS HERNÁN / {t.ui.movement}</div>
+        <h1>{content.heroTitleStart}<br /><em>{content.heroTitleEmphasis}</em><br />{content.heroTitleEnd}</h1>
+        <p>{content.heroDescription}</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#explora">{content.heroPrimaryButton}<span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#sobre-mi">{content.heroSecondaryButton}<span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-footnote"><span class="asterisk">✳</span><span>{content.heroNoteStart}<br />{content.heroNoteEnd}</span></div>
+      </div>
+      <div class="hero-visual"><MotionArt label={t.ui.heroAlt} /><div class="hero-image-caption"><span>FIG. 01</span><span>{t.ui.photoSpace}</span></div></div>
+    </div>
+    <div class="hero-vertical" aria-hidden="true">{t.ui.scroll} &nbsp; ↓</div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div>{t.ui.bodyMovement} <span>✳</span>{content.ticker}<span>✳</span> {t.ui.bodyMovement} <span>✳</span>{content.ticker}<span>✳</span></div></div>
+
+  <section class="about section-space" id="sobre-mi">
+    <div class="wrap about-grid">
+      <div class="about-image"><MotionArt variant="portrait" label={t.ui.portraitAlt} /><span class="image-tag">01 — {t.ui.about}</span></div>
+      <div class="about-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> {t.ui.about}</div>
+        <h2>{content.aboutTitleStart}<br /><em>{content.aboutTitleEmphasis}</em></h2>
+        <div class="about-copy"><p>{content.aboutParagraph1}</p><p>{content.aboutParagraph2}</p></div>
+        <div class="quote-line"><span>✳</span><p>{content.aboutQuote}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offerings section-space" id="explora">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> {t.ui.explore}</div><h2>{content.offeringsTitleStart}<br /><em>{content.offeringsTitleEmphasis}</em></h2></div><p>{content.offeringsDescription}</p></div>
+      <div class="offer-grid">{offerings.map(item => <a class:list={['offer-card', `offer-card--${item.accent}`]} href={item.link} aria-label={`${t.ui.exploreItem} ${item.name}`}>
+        <div class="offer-top"><span>{item.number} / {item.type}</span><span aria-hidden="true">↗</span></div>
+        <div class="offer-graphic" aria-hidden="true"><span>{item.name === 'App' ? '◌' : item.name === 'Ebook' ? '⌁' : '✳'}</span></div>
+        <div class="offer-bottom"><div class="offer-name">{item.name}</div><h3>{item.title}</h3><p>{item.copy}</p><span class="offer-link">{t.ui.exploreItem} {item.name.toLowerCase()} <b>↗</b></span></div>
+      </a>)}</div>
+    </div>
+  </section>
+
+  <section class="contact-preview section-space" id="contacto">
+    <div class="wrap contact-grid"><div><div class="eyebrow"><span class="eyebrow-line"></span> {t.ui.contact}</div><h2>{content.contactTitleStart}<br /><em>{content.contactTitleEmphasis}</em></h2><p>{content.contactDescription}</p><span class="contact-mark" aria-hidden="true">↗</span></div><ContactForm /></div>
+  </section>
+</BaseLayout>
